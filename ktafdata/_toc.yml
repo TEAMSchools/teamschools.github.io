@@ -7,5 +7,5 @@ chapters:
 - file: markdown
 - file: notebooks
 - file: content/team
-- file: content/gabby
+- file: content/databases/gabby.ipynb
 
