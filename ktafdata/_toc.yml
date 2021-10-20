@@ -2,10 +2,10 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro.md
+root: intro
 chapters:
-- file: markdown.md
-- file: notebooks.md
-- file: content/team.md
-- file: content/gabby.md
+- file: markdown
+- file: notebooks
+- file: content/team
+- file: content/gabby
 
