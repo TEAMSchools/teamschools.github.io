@@ -4,12 +4,11 @@
 format: jb-book
 root: intro
 parts:
-  -caption: Data Team
-   chapters:
-   - file: content/team
-   - file: content/databases/gabby.ipynb
-  -caption: Jupyter Book Examples
-  chapters:
-   - file: markdown
-   - file: notebooks
-
+  - caption: Data Team
+    chapters:
+    - file: content/team.md
+    - file: content/databases/gabby.ipynb
+  - caption: Jupyter Book Examples
+    chapters:
+    - file: markdown
+    - file: notebooks
