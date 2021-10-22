@@ -234,6 +234,214 @@
   <div class="tex2jax_ignore mathjax_ignore section" id="databases-gabby">
 <h1>Databases: Gabby<a class="headerlink" href="#databases-gabby" title="Permalink to this headline">¶</a></h1>
 <p>Gabby stores KTAF Student, Alumni, and People Data in a SQL Server. Below we’ll include a searchable list of fields, tables, and views.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sortable dataframe tools</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">qgrid</span>
+<span class="kn">import</span> <span class="nn">pivottablejs</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2013</span><span class="o">/</span><span class="mf">2250642350.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Sortable dataframe tools</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">qgrid</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">pivottablejs</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">file</span> <span class="o">=</span> <span class="s1">&#39;all_columns.csv&#39;</span>
+<span class="n">columns_df</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Regular pandas view of all the data</span>
+<span class="n">columns_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>db_name</th>
+      <th>schema_name</th>
+      <th>table_name</th>
+      <th>type</th>
+      <th>column_id</th>
+      <th>column_name</th>
+      <th>column_max_length</th>
+      <th>column_type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>gabby</td>
+      <td>alumni</td>
+      <td>account</td>
+      <td>U</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>gabby</td>
+      <td>alumni</td>
+      <td>application_c</td>
+      <td>U</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>gabby</td>
+      <td>alumni</td>
+      <td>application_identifiers</td>
+      <td>V</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>gabby</td>
+      <td>alumni</td>
+      <td>application_status_history_c</td>
+      <td>U</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>gabby</td>
+      <td>alumni</td>
+      <td>attachment</td>
+      <td>U</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>50471</th>
+      <td>kippmiami</td>
+      <td>fsa</td>
+      <td>student_scores_previous</td>
+      <td>U</td>
+      <td>32</td>
+      <td>c_5_poss</td>
+      <td>512.0</td>
+      <td>nvarchar</td>
+    </tr>
+    <tr>
+      <th>50472</th>
+      <td>kippmiami</td>
+      <td>fsa</td>
+      <td>student_scores_previous</td>
+      <td>U</td>
+      <td>33</td>
+      <td>c_5_earn</td>
+      <td>512.0</td>
+      <td>nvarchar</td>
+    </tr>
+    <tr>
+      <th>50473</th>
+      <td>kippmiami</td>
+      <td>fsa</td>
+      <td>student_scores_previous</td>
+      <td>U</td>
+      <td>34</td>
+      <td>c_6_poss</td>
+      <td>512.0</td>
+      <td>nvarchar</td>
+    </tr>
+    <tr>
+      <th>50474</th>
+      <td>kippmiami</td>
+      <td>fsa</td>
+      <td>student_scores_previous</td>
+      <td>U</td>
+      <td>35</td>
+      <td>c_6_earn</td>
+      <td>512.0</td>
+      <td>nvarchar</td>
+    </tr>
+    <tr>
+      <th>50475</th>
+      <td>kippmiami</td>
+      <td>fsa</td>
+      <td>student_scores_previous</td>
+      <td>U</td>
+      <td>36</td>
+      <td>_fivetran_synced</td>
+      <td>10.0</td>
+      <td>datetimeoffset</td>
+    </tr>
+  </tbody>
+</table>
+<p>50476 rows × 8 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sortable/searchable list with qgrid</span>
+<span class="n">qgrid</span><span class="o">.</span><span class="n">QgridWidget</span><span class="p">(</span><span class="n">df</span><span class="o">=</span><span class="n">columns_df</span><span class="p">)</span>
+<span class="n">qgrid</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;qgrid&#39; from &#39;/home/cbaldor/.pyenv/versions/3.9.7/envs/datadocs/lib/python3.9/site-packages/qgrid/__init__.py&#39;&gt;
+</pre></div>
+</div>
+</div>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
