@@ -248,7 +248,7 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1976</span><span class="o">/</span><span class="mf">481918484.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1964</span><span class="o">/</span><span class="mf">481918484.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Sortable dataframe tools</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">qgrid</span>
@@ -270,8 +270,8 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Regular pandas view of all the data</span>
-<span class="n">columns_df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Regular pandas view of the all columns/tables view of the database (First 100 entries)</span>
+<span class="n">columns_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -372,79 +372,81 @@
       <td>...</td>
     </tr>
     <tr>
-      <th>50471</th>
-      <td>kippmiami</td>
-      <td>fsa</td>
-      <td>student_scores_previous</td>
-      <td>U</td>
-      <td>32</td>
-      <td>c_5_poss</td>
-      <td>512.0</td>
-      <td>nvarchar</td>
+      <th>95</th>
+      <td>gabby</td>
+      <td>illuminate_public</td>
+      <td>users_validation</td>
+      <td>V</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>50472</th>
-      <td>kippmiami</td>
-      <td>fsa</td>
-      <td>student_scores_previous</td>
+      <th>96</th>
+      <td>gabby</td>
+      <td>illuminate_public</td>
+      <td>users_validation_static</td>
       <td>U</td>
-      <td>33</td>
-      <td>c_5_earn</td>
-      <td>512.0</td>
-      <td>nvarchar</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>50473</th>
-      <td>kippmiami</td>
-      <td>fsa</td>
-      <td>student_scores_previous</td>
+      <th>97</th>
+      <td>gabby</td>
+      <td>illuminate_codes</td>
+      <td>dna_scopes</td>
       <td>U</td>
-      <td>34</td>
-      <td>c_6_poss</td>
-      <td>512.0</td>
-      <td>nvarchar</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>50474</th>
-      <td>kippmiami</td>
-      <td>fsa</td>
-      <td>student_scores_previous</td>
+      <th>98</th>
+      <td>gabby</td>
+      <td>illuminate_codes</td>
+      <td>dna_subject_areas</td>
       <td>U</td>
-      <td>35</td>
-      <td>c_6_earn</td>
-      <td>512.0</td>
-      <td>nvarchar</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
     <tr>
-      <th>50475</th>
-      <td>kippmiami</td>
-      <td>fsa</td>
-      <td>student_scores_previous</td>
+      <th>99</th>
+      <td>gabby</td>
+      <td>illuminate_codes</td>
+      <td>fivetran_audit</td>
       <td>U</td>
-      <td>36</td>
-      <td>_fivetran_synced</td>
-      <td>10.0</td>
-      <td>datetimeoffset</td>
+      <td>-1</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
     </tr>
   </tbody>
 </table>
-<p>50476 rows × 8 columns</p>
+<p>100 rows × 8 columns</p>
 </div></div></div>
 </div>
+<p>QGrid is a tool that creates a sortable widget on a dataframe, but we need to configure it to run on Jupyter Notebook.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Qgrid view</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Qgrid view</span>
 
-<span class="c1"># widget = qgrid.show_grid(columns_df)</span>
-<span class="c1"># widget</span>
+<span class="n">widget</span> <span class="o">=</span> <span class="n">qgrid</span><span class="o">.</span><span class="n">show_grid</span><span class="p">(</span><span class="n">columns_df</span><span class="p">)</span>
+<span class="n">widget</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "a422f692ceee467b80383d36524649be", "version_major": 2, "version_minor": 0}
+{"model_id": "053a431e0c2e4a5faa3fc93d98d20069", "version_major": 2, "version_minor": 0}
 </script></div>
 </div>
+<p>PivotTable.js is an open-source Javascript Pivot Table (aka Pivot Grid, Pivot Chart, Cross-Tab) implementation with drag’n’drop functionality</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pivottablejs view</span>
@@ -50998,7 +51000,8 @@
 </html>
 </div></div>
 </div>
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTyB4iCoIqMbBsYGIHfL7fy95To5jHqsK0mrbcthmVBYSaAZiyVIJ3M56dMb27FnL2Pi8gDGxEQhHNq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe></div>
+<p>Below is just an embedded Google Sheet of the All Columns/All Tables view <a class="reference external" href="https://docs.google.com/spreadsheets/d/1i77SNKkU8xHyDECKo_YWZh_lEIKJtnd3O6vJNtjNcUA/edit?usp=sharing">here</a></p>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTyB4iCoIqMbBsYGIHfL7fy95To5jHqsK0mrbcthmVBYSaAZiyVIJ3M56dMb27FnL2Pi8gDGxEQhHNq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=true"></iframe></div>
 
     <script type="text/x-thebe-config">
     {
