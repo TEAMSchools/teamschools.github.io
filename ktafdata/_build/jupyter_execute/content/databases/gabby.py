@@ -13,8 +13,8 @@
 
 #Sortable dataframe tools
 import pandas as pd
-# import qgrid
-# import ipywidgets
+import qgrid
+import tabloo
 from pivottablejs import pivot_ui
 from IPython.display import HTML
 
@@ -36,19 +36,18 @@ columns_df
 # In[4]:
 
 
-df = pd.DataFrame({"a": [1, 2, 3, 4], "b": [5, 6, 7, 8]})
-df
+#Qgrid view
+
+# widget = qgrid.show_grid(columns_df)
+# widget
 
 
 # In[5]:
 
 
+#Pivottablejs view
 pivot_ui(columns_df, outfile_path='pivottablejs.html')
 HTML('pivottablejs.html')
 
 
-# In[ ]:
-
-
-
-
+# <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTyB4iCoIqMbBsYGIHfL7fy95To5jHqsK0mrbcthmVBYSaAZiyVIJ3M56dMb27FnL2Pi8gDGxEQhHNq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
