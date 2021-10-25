@@ -13,8 +13,10 @@
 
 #Sortable dataframe tools
 import pandas as pd
-import qgrid
-import pivottablejs
+# import qgrid
+# import ipywidgets
+from pivottablejs import pivot_ui
+from IPython.display import HTML
 
 
 # In[2]:
@@ -34,9 +36,15 @@ columns_df
 # In[4]:
 
 
-#Sortable/searchable list with qgrid
-qgrid.QgridWidget(df=columns_df)
-qgrid
+df = pd.DataFrame({"a": [1, 2, 3, 4], "b": [5, 6, 7, 8]})
+df
+
+
+# In[5]:
+
+
+pivot_ui(columns_df, outfile_path='pivottablejs.html')
+HTML('pivottablejs.html')
 
 
 # In[ ]:
