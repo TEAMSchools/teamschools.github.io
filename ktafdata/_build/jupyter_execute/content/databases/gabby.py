@@ -29,18 +29,22 @@ columns_df=pd.read_csv(file)
 # In[3]:
 
 
-#Regular pandas view of all the data
-columns_df
+#Regular pandas view of the all columns/tables view of the database (First 100 entries)
+columns_df.head(100)
 
+
+# QGrid is a tool that creates a sortable widget on a dataframe, but we need to configure it to run on Jupyter Notebook.
 
 # In[4]:
 
 
-#Qgrid view
+# Qgrid view
 
-# widget = qgrid.show_grid(columns_df)
-# widget
+widget = qgrid.show_grid(columns_df)
+widget
 
+
+# PivotTable.js is an open-source Javascript Pivot Table (aka Pivot Grid, Pivot Chart, Cross-Tab) implementation with drag'n'drop functionality
 
 # In[5]:
 
@@ -50,4 +54,6 @@ pivot_ui(columns_df, outfile_path='pivottablejs.html')
 HTML('pivottablejs.html')
 
 
-# <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTyB4iCoIqMbBsYGIHfL7fy95To5jHqsK0mrbcthmVBYSaAZiyVIJ3M56dMb27FnL2Pi8gDGxEQhHNq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+# Below is just an embedded Google Sheet of the All Columns/All Tables view [here](https://docs.google.com/spreadsheets/d/1i77SNKkU8xHyDECKo_YWZh_lEIKJtnd3O6vJNtjNcUA/edit?usp=sharing)
+
+# <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTyB4iCoIqMbBsYGIHfL7fy95To5jHqsK0mrbcthmVBYSaAZiyVIJ3M56dMb27FnL2Pi8gDGxEQhHNq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=true"></iframe>
