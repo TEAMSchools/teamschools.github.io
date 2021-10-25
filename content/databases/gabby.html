@@ -238,8 +238,8 @@
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Sortable dataframe tools</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="c1"># import qgrid</span>
-<span class="c1"># import ipywidgets</span>
+<span class="kn">import</span> <span class="nn">qgrid</span>
+<span class="kn">import</span> <span class="nn">tabloo</span>
 <span class="kn">from</span> <span class="nn">pivottablejs</span> <span class="kn">import</span> <span class="n">pivot_ui</span>
 <span class="kn">from</span> <span class="nn">IPython.display</span> <span class="kn">import</span> <span class="n">HTML</span>
 </pre></div>
@@ -248,11 +248,11 @@
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2082</span><span class="o">/</span><span class="mf">802426481.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_1976</span><span class="o">/</span><span class="mf">481918484.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Sortable dataframe tools</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># import qgrid</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># import ipywidgets</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">qgrid</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">tabloo</span>
 <span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">from</span> <span class="nn">pivottablejs</span> <span class="kn">import</span> <span class="n">pivot_ui</span>
 
 <span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
@@ -433,62 +433,22 @@
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s2">&quot;a&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">],</span> <span class="s2">&quot;b&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]})</span>
-<span class="n">df</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Qgrid view</span>
+
+<span class="c1"># widget = qgrid.show_grid(columns_df)</span>
+<span class="c1"># widget</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>a</th>
-      <th>b</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>1</td>
-      <td>5</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>2</td>
-      <td>6</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>3</td>
-      <td>7</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>4</td>
-      <td>8</td>
-    </tr>
-  </tbody>
-</table>
-</div></div></div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "a422f692ceee467b80383d36524649be", "version_major": 2, "version_minor": 0}
+</script></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pivot_ui</span><span class="p">(</span><span class="n">columns_df</span><span class="p">,</span> <span class="n">outfile_path</span><span class="o">=</span><span class="s1">&#39;pivottablejs.html&#39;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Pivottablejs view</span>
+<span class="n">pivot_ui</span><span class="p">(</span><span class="n">columns_df</span><span class="p">,</span> <span class="n">outfile_path</span><span class="o">=</span><span class="s1">&#39;pivottablejs.html&#39;</span><span class="p">)</span>
 <span class="n">HTML</span><span class="p">(</span><span class="s1">&#39;pivottablejs.html&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -51038,7 +50998,7 @@
 </html>
 </div></div>
 </div>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTyB4iCoIqMbBsYGIHfL7fy95To5jHqsK0mrbcthmVBYSaAZiyVIJ3M56dMb27FnL2Pi8gDGxEQhHNq/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe></div>
 
     <script type="text/x-thebe-config">
     {
