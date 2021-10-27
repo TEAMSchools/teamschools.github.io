@@ -7,7 +7,7 @@ parts:
   - caption: Data Team
     chapters:
     - file: content/team.md
-    - file: content/databases/gabby.ipynb
+    - file: content/databases/gabby.md
   - caption: Jupyter Book Examples
     chapters:
     - file: markdown
