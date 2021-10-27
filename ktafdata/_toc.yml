@@ -10,6 +10,9 @@ parts:
     - file: content/databases/data_model.md
       sections: 
         - file: content/databases/gabby.md
+    - file: content/processes
+      sections:
+        - file: content/processes/pm_surveys.md
   - caption: Jupyter Book Examples
     chapters:
     - file: markdown
