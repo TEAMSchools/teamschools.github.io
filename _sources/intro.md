@@ -17,4 +17,4 @@ Reach out to your school point person: School Ops teams manage student schedules
 Reach out to Teaching and Learning: your subject or assessment point people have the expertise around all things assessments, Illuminate, academic policies, F&P and more : [T&L Wiki](https://sites.google.com/apps.teamschools.org/teachingandlearning/home)
 
 
-![](data_domains.svg)
+![](data_domains.svg) 
