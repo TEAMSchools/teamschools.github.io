@@ -7,23 +7,23 @@
 * Create a new survey on [Alchemer (formerly SurveyGizmo)](https://www.alchemer.com).
 
 * Create Name question for the survey taker
-    * Under Logic, alias it as “respondant_df_employee_number”
-    ![](images/survey_setup_1.png)
+    * Under Logic, alias it as “respondent_df_employee_number”
+        ![](images/survey_setup_1.png)<br/>
     * If piping from Survey HQ, create a default answer with a URL parameter (best practice is to match the Alias and the parameter)
 
-* Create any additional piping/logic questions (see examples below). Be sure to add aliases and default answers. You can hide questions as needed under Logic -> Hide Question By Default
-    ![](images/survey_setup_2.png)
-    ![](images/survey_setup_3.png)
+* Create any additional piping/logic questions (see examples below). Be sure to add aliases and default answers. You can hide questions as needed under Logic -> Hide Question By Default 
+        ![](images/survey_setup_2.png) <br/>
+        ![](images/survey_setup_3.png) <br/>
 
-* Continue creating questions and setting up the survey. Be sure to alias each question.
+* Continue creating questions and setting up the survey. Be sure to alias each question. <br/>
 
-* When done, go to Style -> Themes -> Your Theme Library and apply the KTAF survey theme
-    ![](images/survey_setup_4.png)
+* When done, go to Style -> Themes -> Your Theme Library and apply the KTAF survey theme <br/>
+        ![](images/survey_setup_4.png) <br/>
 
-* Under Share, create a new campaign (outlined below).
+* Under Share, create a new campaign (outlined below).<br/>
 
-* The survey will now be ready to flow into [gabby](content/databases/gabby.md). You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
-    ![](images/survey_setup_5.png)
+* The survey will now be ready to flow into [gabby](ktafdata/content/databases/gabby). You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
+        ![](images/survey_setup_5.png)<br/>
 
 ---
 
@@ -44,7 +44,7 @@
 * In the S&O Assignments tab, unhide Column A, and run SQL query in gabby database.
 * Copy results table, and overwrite the first five columns in the S&O Assignments tab.
 * Remove any existing data in the S&O Assignments columns (Highlight all - Delete).
-        ![](images/survey_annual_2.png)      
+        ![](images/survey_annual_2.png) <br/>      
 
 * To create filter view for new schools:
     * Data > Filter Views > Create New Filter View
@@ -121,11 +121,14 @@
 
 ### Insight Survey Tracking
 
+* Updating TNTP Completion Data
 
+    <video src='images/updating_tntp.mp4' width=800/>
 ---
 
 ### So, what’s actually happening on all of the tabs of the PM Management Document?
 
+* Content TBD
 ---
 
 ### Survey Tracker
@@ -142,7 +145,7 @@
 * Update the Academic Year filter
 * Update the Reporting Term filter
 * Double-check the dashboard is updating at 6am Eastern/3am Pacific
-    ![](survey_tracker_1.png)
+    ![](images/survey_tracker_1.png)
 
 ---
 
@@ -159,7 +162,7 @@
 * Update the Academic Year filter
 * Update the Reporting Term filter
 * Double-check the dashboard is updating at 6am Eastern/3am Pacific
-    ![](survey_hq_1.png)
+    ![](images/survey_hq_1.png)
 
 ### Survey Campaigns
 #### Background
@@ -169,7 +172,7 @@
 
 * Go to the Survey you want to create a campaign for, click share, and Create New Tracking Link
 * Create Campaign (DO NOT CLONE!) - Name it 'YEAR Survey Round' (YYYY SO#, YYYY MGR#, or YYYY R9#)
-    ![](survey_campaigns_1.png)
+    ![](images/survey_campaigns_1.png)
 * In advanced settings, set link Behavior to "Everyone gets the same link (can take survey as many times as they want)"
 * In advanced settings, set the Auto Open/Close Link dates & times to the survey window
 
@@ -189,32 +192,32 @@
     * Run the Bash command in a new Bash console (this is in the comment at the top of the notebook):
         ```cd ~/datarobot/datagun./bin/qgtunnel ~/.pyenv/versions/datagun/bin/python ./datagun/extract.py -C ./datagun/config/surveygizmo.json```
     * Run the first 5 cells in the notebook
-        ![](survey_roster_1.png)
+        ![](images/survey_roster_1.png)
     * You can run the last 3 cells if you’ve updated the list of universities (this requires generating a new list of universities and saving it as a CSV in data/undergraduate_institutions.csv
 * Download the roster from the PM Management document as a CSV, drop all columns besides employee number, name, and email (optional location, job_title).
 * Split ‘preferred_first’ and ‘preferred_last’ into two columns.
 * In the Survey Campaign, go to the Contacts tab and click “Add Contacts”
-        ![](survey_roster_2.png)
+        ![](images/survey_roster_2.png)
 * Upload CSV to Contacts in the campaign. Map column headers to fields.
-        ![](survey_roster_3.png)
+        ![](images/survey_roster_3.png)
 
 #### Steps to Set Up Email Reminders
 * Set up Survey reminder schedule (for all surveys it's Wednesday, Friday, Monday, Wednesday, Friday, Monday, Tuesday, Wednesday) - adjust links and custom fields in style and preview, check, "Disable all SurveyGizmo styling..." - you have to do this for every message
 
-    ![](survey_emails_1.png)
+    ![](images/survey_emails_1.png)
 
 * Adjust the email footer so that the unsubscribe button has this message next to it: "If you click to unsubscribe you will not receive important email updates to help complete surveys"
 * Send a test email, and once you’ve confirmed everything looks good, schedule sending the first email by clicking “3 Send Campaign” and then “Not Scheduled”
     
-    ![](survey_emails_2.png)
+    ![](images/survey_emails_2.png)
 
 * Add reminder emails, schedule them out, and add the automated reminder text to the top. Be sure to disable the Survey Gizmo Styling (like above)
 
-    ![](survey_emails_2.png)
+    ![](images/survey_emails_2.png)
 
 * Check the Reminder schedule when you’re done
 
-    ![](survey_emails_3.png)
+    ![](images/survey_emails_3.png)
 
 #### Steps to Set Up Email Reminders
 

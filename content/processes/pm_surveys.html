@@ -51,6 +51,7 @@
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="Databases: Gabby" href="../databases/gabby.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -89,49 +90,39 @@
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
- <span class="caption-text">
-  Data Team
- </span>
-</p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../team.html">
    Data Team
   </a>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="../databases/data_model.html">
-   Data Model
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="../databases/gabby.html">
-     Databases: Gabby
-    </a>
-   </li>
-  </ul>
- </li>
 </ul>
 <p class="caption" role="heading">
  <span class="caption-text">
-  Jupyter Book Examples
+  Data Model
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
-  <a class="reference internal" href="../../markdown.html">
-   Markdown
+  <a class="reference internal" href="../databases/data_model.html">
+   Data Model
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../../notebooks.html">
-   Notebooks
+  <a class="reference internal" href="../databases/gabby.html">
+   Databases: Gabby
+  </a>
+ </li>
+</ul>
+<p class="caption" role="heading">
+ <span class="caption-text">
+  Process Documentation
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Performance Management and Surveys
   </a>
  </li>
 </ul>
@@ -379,20 +370,20 @@
 <li><p>Create a new survey on <a class="reference external" href="https://www.alchemer.com">Alchemer (formerly SurveyGizmo)</a>.</p></li>
 <li><p>Create Name question for the survey taker</p>
 <ul>
-<li><p>Under Logic, alias it as “respondant_df_employee_number”
-<img alt="" src="../../_images/survey_setup_1.png" /></p></li>
+<li><p>Under Logic, alias it as “respondent_df_employee_number”
+<img alt="" src="../../_images/survey_setup_1.png" /><br/></p></li>
 <li><p>If piping from Survey HQ, create a default answer with a URL parameter (best practice is to match the Alias and the parameter)</p></li>
 </ul>
 </li>
 <li><p>Create any additional piping/logic questions (see examples below). Be sure to add aliases and default answers. You can hide questions as needed under Logic -&gt; Hide Question By Default
-<img alt="" src="../../_images/survey_setup_2.png" />
-<img alt="" src="../../_images/survey_setup_3.png" /></p></li>
-<li><p>Continue creating questions and setting up the survey. Be sure to alias each question.</p></li>
-<li><p>When done, go to Style -&gt; Themes -&gt; Your Theme Library and apply the KTAF survey theme
-<img alt="" src="../../_images/survey_setup_4.png" /></p></li>
-<li><p>Under Share, create a new campaign (outlined below).</p></li>
+<img alt="" src="../../_images/survey_setup_2.png" /> <br/>
+<img alt="" src="../../_images/survey_setup_3.png" /> <br/></p></li>
+<li><p>Continue creating questions and setting up the survey. Be sure to alias each question. <br/></p></li>
+<li><p>When done, go to Style -&gt; Themes -&gt; Your Theme Library and apply the KTAF survey theme <br/>
+<img alt="" src="../../_images/survey_setup_4.png" /> <br/></p></li>
+<li><p>Under Share, create a new campaign (outlined below).<br/></p></li>
 <li><p>The survey will now be ready to flow into <span class="xref myst">gabby</span>. You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
-<img alt="" src="../../_images/survey_setup_5.png" /></p></li>
+<img alt="" src="../../_images/survey_setup_5.png" /><br/></p></li>
 </ul>
 </div>
 <hr class="docutils" />
@@ -416,7 +407,7 @@
 <li><p>In the S&amp;O Assignments tab, unhide Column A, and run SQL query in gabby database.</p></li>
 <li><p>Copy results table, and overwrite the first five columns in the S&amp;O Assignments tab.</p></li>
 <li><p>Remove any existing data in the S&amp;O Assignments columns (Highlight all - Delete).
-<img alt="" src="../../_images/survey_annual_2.png" /></p></li>
+<img alt="" src="../../_images/survey_annual_2.png" /> <br/></p></li>
 <li><p>To create filter view for new schools:</p>
 <ul class="simple">
 <li><p>Data &gt; Filter Views &gt; Create New Filter View</p></li>
@@ -511,10 +502,18 @@
 <hr class="docutils" />
 <div class="section" id="insight-survey-tracking">
 <h3>Insight Survey Tracking<a class="headerlink" href="#insight-survey-tracking" title="Permalink to this headline">¶</a></h3>
+<ul>
+<li><p>Updating TNTP Completion Data</p>
+  <video src='images/updating_tntp.mp4' width=800/>
+</li>
+</ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="so-whats-actually-happening-on-all-of-the-tabs-of-the-pm-management-document">
 <h3>So, what’s actually happening on all of the tabs of the PM Management Document?<a class="headerlink" href="#so-whats-actually-happening-on-all-of-the-tabs-of-the-pm-management-document" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>Content TBD</p></li>
+</ul>
 </div>
 <hr class="docutils" />
 <div class="section" id="survey-tracker">
@@ -535,7 +534,7 @@
 <li><p>Update the Academic Year filter</p></li>
 <li><p>Update the Reporting Term filter</p></li>
 <li><p>Double-check the dashboard is updating at 6am Eastern/3am Pacific
-<img alt="" src="content/processes/survey_tracker_1.png" /></p></li>
+<img alt="" src="../../_images/survey_tracker_1.png" /></p></li>
 </ul>
 </div>
 </div>
@@ -558,7 +557,7 @@
 <li><p>Update the Academic Year filter</p></li>
 <li><p>Update the Reporting Term filter</p></li>
 <li><p>Double-check the dashboard is updating at 6am Eastern/3am Pacific
-<img alt="" src="content/processes/survey_hq_1.png" /></p></li>
+<img alt="" src="../../_images/survey_hq_1.png" /></p></li>
 </ul>
 </div>
 </div>
@@ -575,7 +574,7 @@
 <ul class="simple">
 <li><p>Go to the Survey you want to create a campaign for, click share, and Create New Tracking Link</p></li>
 <li><p>Create Campaign (DO NOT CLONE!) - Name it ‘YEAR Survey Round’ (YYYY SO#, YYYY MGR#, or YYYY R9#)
-<img alt="" src="content/processes/survey_campaigns_1.png" /></p></li>
+<img alt="" src="../../_images/survey_campaigns_1.png" /></p></li>
 <li><p>In advanced settings, set link Behavior to “Everyone gets the same link (can take survey as many times as they want)”</p></li>
 <li><p>In advanced settings, set the Auto Open/Close Link dates &amp; times to the survey window</p></li>
 </ul>
@@ -605,33 +604,33 @@
 <li><p>Run the Bash command in a new Bash console (this is in the comment at the top of the notebook):
 <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">~/datarobot/datagun./bin/qgtunnel</span> <span class="pre">~/.pyenv/versions/datagun/bin/python</span> <span class="pre">./datagun/extract.py</span> <span class="pre">-C</span> <span class="pre">./datagun/config/surveygizmo.json</span></code></p></li>
 <li><p>Run the first 5 cells in the notebook
-<img alt="" src="content/processes/survey_roster_1.png" /></p></li>
+<img alt="" src="../../_images/survey_roster_1.png" /></p></li>
 <li><p>You can run the last 3 cells if you’ve updated the list of universities (this requires generating a new list of universities and saving it as a CSV in data/undergraduate_institutions.csv</p></li>
 </ul>
 </li>
 <li><p>Download the roster from the PM Management document as a CSV, drop all columns besides employee number, name, and email (optional location, job_title).</p></li>
 <li><p>Split ‘preferred_first’ and ‘preferred_last’ into two columns.</p></li>
 <li><p>In the Survey Campaign, go to the Contacts tab and click “Add Contacts”
-<img alt="" src="content/processes/survey_roster_2.png" /></p></li>
+<img alt="" src="../../_images/survey_roster_2.png" /></p></li>
 <li><p>Upload CSV to Contacts in the campaign. Map column headers to fields.
-<img alt="" src="content/processes/survey_roster_3.png" /></p></li>
+<img alt="" src="../../_images/survey_roster_3.png" /></p></li>
 </ul>
 </div>
 <div class="section" id="steps-to-set-up-email-reminders">
 <h4>Steps to Set Up Email Reminders<a class="headerlink" href="#steps-to-set-up-email-reminders" title="Permalink to this headline">¶</a></h4>
 <ul>
 <li><p>Set up Survey reminder schedule (for all surveys it’s Wednesday, Friday, Monday, Wednesday, Friday, Monday, Tuesday, Wednesday) - adjust links and custom fields in style and preview, check, “Disable all SurveyGizmo styling…” - you have to do this for every message</p>
-<p><img alt="" src="content/processes/survey_emails_1.png" /></p>
+<p><img alt="" src="../../_images/survey_emails_1.png" /></p>
 </li>
 <li><p>Adjust the email footer so that the unsubscribe button has this message next to it: “If you click to unsubscribe you will not receive important email updates to help complete surveys”</p></li>
 <li><p>Send a test email, and once you’ve confirmed everything looks good, schedule sending the first email by clicking “3 Send Campaign” and then “Not Scheduled”</p>
-<p><img alt="" src="content/processes/survey_emails_2.png" /></p>
+<p><img alt="" src="../../_images/survey_emails_2.png" /></p>
 </li>
 <li><p>Add reminder emails, schedule them out, and add the automated reminder text to the top. Be sure to disable the Survey Gizmo Styling (like above)</p>
-<p><img alt="" src="content/processes/survey_emails_2.png" /></p>
+<p><img alt="" src="../../_images/survey_emails_2.png" /></p>
 </li>
 <li><p>Check the Reminder schedule when you’re done</p>
-<p><img alt="" src="content/processes/survey_emails_3.png" /></p>
+<p><img alt="" src="../../_images/survey_emails_3.png" /></p>
 </li>
 </ul>
 </div>
@@ -699,6 +698,15 @@
 
 <div class='prev-next-bottom'>
     
+    <div id="prev">
+        <a class="left-prev" href="../databases/gabby.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title">Databases: Gabby</p>
+            </div>
+        </a>
+    </div>
 
 </div>
         
