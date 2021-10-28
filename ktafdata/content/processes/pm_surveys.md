@@ -39,7 +39,7 @@
 * Go to the [PM Management Document](https://docs.google.com/spreadsheets/d/1d84x7HHOMgnQM78dYLY9vHqf-jLfYmpH8YGHEDezGNs/edit#gid=249348654). 
 * Update dates for this round.
 * Insert any new schools (later: create links to filter views for each school).
-        ![](images/survey_annual_1.png)
+        ![](images/survey_annual_1)
 
 * In the S&O Assignments tab, unhide Column A, and run SQL query in gabby database.
 * Copy results table, and overwrite the first five columns in the S&O Assignments tab.
@@ -121,11 +121,12 @@
 
 ### Insight Survey Tracking
 
-
+* Content TBD
 ---
 
 ### So, what’s actually happening on all of the tabs of the PM Management Document?
 
+* Content TBD
 ---
 
 ### Survey Tracker
