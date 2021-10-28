@@ -225,11 +225,55 @@
   <a class="reference internal nav-link" href="#surveys">
    Surveys
   </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#set-up">
-   Set Up
-  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#set-up">
+     Set Up
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#self-others-manager-assignments-on-the-pm-management-document">
+     Self &amp; Others + Manager Assignments on the PM Management Document
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#background">
+       Background
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#steps-to-update-beginning-of-year">
+       Steps to Update (Beginning Of Year)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#steps-to-update-middle-of-year-end-of-year">
+       Steps to Update (Middle Of Year &amp; End of Year)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#final-checks-before-sending-to-dsos-and-school-leaders">
+       Final Checks Before Sending to DSOs and School Leaders
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#insight-survey-tracking">
+     Insight Survey Tracking
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#so-whats-actually-happening-on-all-of-the-tabs-of-the-pm-management-document">
+     So, what’s actually happening on all of the tabs of the PM Management Document?
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#survey-tracker">
+     Survey Tracker
+    </a>
+   </li>
+  </ul>
  </li>
 </ul>
 
@@ -246,11 +290,10 @@
 <h1>Performance Management and Surveys<a class="headerlink" href="#performance-management-and-surveys" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="surveys">
 <h2>Surveys<a class="headerlink" href="#surveys" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="set-up">
-<h2>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h2>
+<h3>Set Up<a class="headerlink" href="#set-up" title="Permalink to this headline">¶</a></h3>
 <ol class="simple">
-<li><p>Create a new survey on Alchemer</p></li>
+<li><p>Create a new survey on <a class="reference external" href="https://www.alchemer.com">Alchemer (formerly SurveyGizmo)</a>.</p></li>
 <li><p>Create Name question for the survey taker</p>
 <ul class="simple">
 <li><p>Under Logic, alias it as “respondant_df_employee_number”
@@ -268,6 +311,132 @@
 <li><p>The survey will now be ready to flow into <span class="xref myst">gabby</span>. You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
 <img alt="" src="../../_images/survey_setup_5.png" /></p></li>
 </ol>
+</div>
+<hr class="docutils" />
+<div class="section" id="self-others-manager-assignments-on-the-pm-management-document">
+<h3>Self &amp; Others + Manager Assignments on the PM Management Document<a class="headerlink" href="#self-others-manager-assignments-on-the-pm-management-document" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="background">
+<h4>Background<a class="headerlink" href="#background" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>School Leaders and DSOs need to update managers and S&amp;O survey assignments each survey round</p></li>
+<li><p>PM Management document lives <a class="reference external" href="https://docs.google.com/spreadsheets/d/1d84x7HHOMgnQM78dYLY9vHqf-jLfYmpH8YGHEDezGNs/edit#gid=249348654">here</a></p></li>
+<li><p>Timing: Happens during a predefined window ahead of each survey round, 2-3 weeks before a survey round opens</p></li>
+</ul>
+</div>
+<div class="section" id="steps-to-update-beginning-of-year">
+<h4>Steps to Update (Beginning Of Year)<a class="headerlink" href="#steps-to-update-beginning-of-year" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Go to the <a class="reference external" href="https://docs.google.com/spreadsheets/d/1d84x7HHOMgnQM78dYLY9vHqf-jLfYmpH8YGHEDezGNs/edit#gid=249348654">PM Management Document</a>.</p></li>
+<li><p>Update dates for this round.</p></li>
+<li><p>Insert any new schools (later: create links to filter views for each school).
+<img alt="" src="../../_images/survey_annual_1.png" /></p></li>
+<li><p>In the S&amp;O Assignments tab, unhide Column A, and run SQL query in gabby database.</p></li>
+<li><p>Copy results table, and overwrite the first five columns in the S&amp;O Assignments tab.</p></li>
+<li><p>Remove any existing data in the S&amp;O Assignments columns (Highlight all - Delete).
+<img alt="" src="../../_images/survey_annual_2.png" /></p></li>
+<li><p>To create filter view for new schools:</p>
+<ul class="simple">
+<li><p>Data &gt; Filter Views &gt; Create New Filter View</p></li>
+<li><p>Name the filter the new school name</p></li>
+<li><p>Set the range to A2 to End of Row, Last Column
+<img alt="" src="../../_images/survey_annual_3.png" /></p></li>
+<li><p>Copy link for filter view, insert link on the start page of PM Management Document.
+<img alt="" src="../../_images/survey_annual_4.png" /></p></li>
+</ul>
+</li>
+<li><p>In the next few steps, we’ll plug in the information for the three survey management columns:</p>
+<ul class="simple">
+<li><p>Should take surveys this round</p></li>
+<li><p>TNTP/Insight Survey Assignment</p></li>
+<li><p>Winter Engagement Survey Assignment</p></li>
+</ul>
+</li>
+<li><p>For column ‘Should take surveys this round.’ do the following:</p>
+<ul class="simple">
+<li><p>Set the following groups to ‘Yes - Should take manager survey only’</p>
+<ul>
+<li><p>Primary Site IN (Room 9, Room 10, Room 11)</p></li>
+<li><p>Primary_job IN (Senior Custodian, Security, Custodian)</p></li>
+</ul>
+</li>
+<li><p>Set everyone else to ‘Yes’.</p></li>
+<li><p>Later: be sure to ask the T&amp;L, KIPP Forward, and Ops teams if they want to have teammates complete S&amp;O surveys. If they do, those teammates will need to have Should take surveys this round to “Yes.”</p></li>
+</ul>
+</li>
+<li><p>For column ‘TNTP/Insight Survey Assignment’ do the following:</p>
+<ul class="simple">
+<li><p>Create a temporary tab and put the TNTP Insight Survey assignments (that were most recently submitted to KIPP Foundation. It should in Box) into it</p></li>
+<li><p>Index-match the TNTP/insight assignments into the ‘S&amp;O Assignments’ tab</p></li>
+<li><p>Copy the data and paste values back into the tab (so that the formula is overwrite)</p></li>
+<li><p>Delete the temporary tab</p></li>
+</ul>
+</li>
+<li><p>For column ‘Engagement Survey Assignment’ do the following:</p>
+<ul>
+<li><p>Unhide the ‘Engagement Survey Assignment’ tab. This tab is a dictionary of titles to ‘Engagement Survey Assignment’ selection.</p></li>
+<li><p>Index-match the engagement survey assignment dictionary from the ‘Engagement Survey Assignment’ tab into the ‘S&amp;O Assignments’ tab</p>
+<p><img alt="" src="../../_images/survey_annual_5.png" /></p>
+</li>
+<li><p>For any job titles that do not have an engagement survey assignment, update the dictionary with the correct assignment (check if you’re unsure)</p></li>
+<li><p>Copy the data and paste values back into the tab (so that the Index-match formula is overwritten).</p></li>
+<li><p>Re-hide the ‘Engagement Survey Assignment’ tab</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="steps-to-update-middle-of-year-end-of-year">
+<h4>Steps to Update (Middle Of Year &amp; End of Year)<a class="headerlink" href="#steps-to-update-middle-of-year-end-of-year" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Go to PM Management Document.</p></li>
+<li><p>Update dates for this round.</p></li>
+<li><p>Duplicate ‘S&amp;O Assignments’ tab. Run SQL Query (as in BOY). In the next few steps, you’re going to update the survey roster and keep the survey assignments from last round</p></li>
+<li><p>Go back to the original ‘S&amp;O Assignment’ tab</p></li>
+<li><p>Copy results table, and overwrite the first five columns in the S&amp;O Assignments tab.</p></li>
+<li><p>Delete data in ‘S&amp;O Assignments’ columns and in the columns (referred to below as the three survey management columns)</p>
+<ul class="simple">
+<li><p>Should take surveys this round</p></li>
+<li><p>TNTP/Insight Survey Assignment</p></li>
+<li><p>Winter Engagement Survey Assignment</p></li>
+</ul>
+</li>
+<li><p>Run INDEX MATCH to ‘S&amp;O Assignments’ (Original) to pre-populate assignments in the three survey management columns and in the S&amp;O assignments columns from last round.</p>
+<p>Formula: <code class="docutils literal notranslate"><span class="pre">=IFERROR(INDEX('Copy</span> <span class="pre">of</span> <span class="pre">S&amp;O</span> <span class="pre">Assignments'!$A$2:$T$3566,MATCH($A3,'Copy</span> <span class="pre">of</span> <span class="pre">S&amp;O</span> <span class="pre">Assignments'!$A:$A,0),MATCH(K$2,'Copy</span> <span class="pre">of</span> <span class="pre">S&amp;O</span> <span class="pre">Assignments'!$2:$2,0)),&quot;&quot;)</span></code></p>
+</li>
+<li><p>Still in the original ‘S&amp;O Assignments’ tab, highlight the columns with the S&amp;O assignments and the three survey management columns (H-T in the screenshot below). Copy the data, and repaste the values into the cells. You are overwriting the index-match formula with the raw assignments.</p>
+<p><img alt="" src="../../_images/survey_annual_6.png" /></p>
+</li>
+<li><p>Delete the ‘Copy of S&amp;O Assignments’ tab</p></li>
+</ul>
+</div>
+<div class="section" id="final-checks-before-sending-to-dsos-and-school-leaders">
+<h4>Final Checks Before Sending to DSOs and School Leaders<a class="headerlink" href="#final-checks-before-sending-to-dsos-and-school-leaders" title="Permalink to this headline">¶</a></h4>
+<ul>
+<li><p>Spot check some managers in column “ADP Manager + Whetstone Coach [Do Not Edit]” to ensure that the feed is correct</p></li>
+<li><p>Check the ‘Survey Audits’ tab to make sure the columns are lining up and that the counts are working properly</p></li>
+<li><p>Go to the ‘Teacher Goals Exemptions’ tab. This tab contains a record of all staff exempted from Teacher Goals in prior and current years. A hidden Column A automatically tags the current year to new entries. Rows with prior year entries are hidden.</p>
+<ul class="simple">
+<li><p>Update the dates in the headers</p></li>
+<li><p>In the beginning of the year, Update the formula that’s hidden in Column A, so that any new entries are tied to the correct year</p></li>
+<li><p>Hide Column A and any rows records that were submitted for previous school year</p></li>
+</ul>
+<p><img alt="" src="../../_images/survey_annual_7.png" /></p>
+</li>
+<li><p>Double Check the links on the ‘S&amp;O Start Here’ tab</p></li>
+</ul>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="insight-survey-tracking">
+<h3>Insight Survey Tracking<a class="headerlink" href="#insight-survey-tracking" title="Permalink to this headline">¶</a></h3>
+</div>
+<hr class="docutils" />
+<div class="section" id="so-whats-actually-happening-on-all-of-the-tabs-of-the-pm-management-document">
+<h3>So, what’s actually happening on all of the tabs of the PM Management Document?<a class="headerlink" href="#so-whats-actually-happening-on-all-of-the-tabs-of-the-pm-management-document" title="Permalink to this headline">¶</a></h3>
+</div>
+<hr class="docutils" />
+<div class="section" id="survey-tracker">
+<h3>Survey Tracker<a class="headerlink" href="#survey-tracker" title="Permalink to this headline">¶</a></h3>
+</div>
 </div>
 </div>
 
