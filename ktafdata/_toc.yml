@@ -3,17 +3,14 @@
 
 format: jb-book
 root: intro
-parts:
-  - caption: Data Team
-    chapters:
-    - file: content/team.md
-    - file: content/databases/data_model.md
-      sections: 
-        - file: content/databases/gabby.md
-    - file: content/processes
-      sections:
-        - file: content/processes/pm_surveys.md
-  - caption: Jupyter Book Examples
-    chapters:
-    - file: markdown
-    - file: notebooks
+chapters:
+- file: markdown
+- file: mymarkdownfile
+- file: content/team
+  sections:
+  - file: content/databases/data_model
+    sections:
+    - file: content/databases/gabby
+  - file: content/processes/pm_surveys
+    sections:
+    - file: content/processes/process

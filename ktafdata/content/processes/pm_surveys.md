@@ -22,7 +22,7 @@
 
 * Under Share, create a new campaign (outlined below).
 
-* The survey will now be ready to flow into [gabby](content/databases/gabby.md). You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
+* The survey will now be ready to flow into [gabby](ktafdata/content/databases/gabby.md). You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
     ![](images/survey_setup_5.png)
 
 ---
