@@ -7,7 +7,7 @@
 * Create a new survey on [Alchemer (formerly SurveyGizmo)](https://www.alchemer.com).
 
 * Create Name question for the survey taker
-    * Under Logic, alias it as “respondant_df_employee_number”
+    * Under Logic, alias it as “respondent_df_employee_number”
         ![](images/survey_setup_1.png)<br/>
     * If piping from Survey HQ, create a default answer with a URL parameter (best practice is to match the Alias and the parameter)
 
@@ -22,7 +22,7 @@
 
 * Under Share, create a new campaign (outlined below).<br/>
 
-* The survey will now be ready to flow into [gabby](ktafdata/_build/html/content/databases/gabby.html). You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
+* The survey will now be ready to flow into [gabby](ktafdata/content/databases/gabby). You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
         ![](images/survey_setup_5.png)<br/>
 
 ---
