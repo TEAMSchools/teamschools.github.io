@@ -4,13 +4,11 @@
 format: jb-book
 root: intro
 chapters:
-- file: markdown
-- file: mymarkdownfile
 - file: content/team
   sections:
   - file: content/databases/data_model
     sections:
     - file: content/databases/gabby
-  - file: content/processes/pm_surveys
+  - file: content/processes/process
     sections:
-    - file: content/processes/process
+    - file: content/processes/pm_surveys 
