@@ -1,40 +1,38 @@
-# Performance Management and Surveys
+# Surveys
 
-## Surveys
-
-### Set Up
+## Set Up
 
 * Create a new survey on [Alchemer (formerly SurveyGizmo)](https://www.alchemer.com).
 
 * Create Name question for the survey taker
     * Under Logic, alias it as “respondent_df_employee_number”
-        ![](images/survey_setup_1.png)<br/>
+        ![](images/survey_setup_1.png)
     * If piping from Survey HQ, create a default answer with a URL parameter (best practice is to match the Alias and the parameter)
 
 * Create any additional piping/logic questions (see examples below). Be sure to add aliases and default answers. You can hide questions as needed under Logic -> Hide Question By Default 
-        ![](images/survey_setup_2.png) <br/>
-        ![](images/survey_setup_3.png) <br/>
+        ![](images/survey_setup_2.png) 
+        ![](images/survey_setup_3.png) 
 
-* Continue creating questions and setting up the survey. Be sure to alias each question. <br/>
+* Continue creating questions and setting up the survey. Be sure to alias each question. 
 
-* When done, go to Style -> Themes -> Your Theme Library and apply the KTAF survey theme <br/>
-        ![](images/survey_setup_4.png) <br/>
+* When done, go to Style -> Themes -> Your Theme Library and apply the KTAF survey theme 
+        ![](images/survey_setup_4.png) 
 
-* Under Share, create a new campaign (outlined below).<br/>
+* Under Share, create a new campaign (outlined below).
 
 * The survey will now be ready to flow into [gabby](ktafdata/content/databases/gabby). You’ll need to adjust views and create an output view. Additionally, if you want to create question options (eg: Plug in a list of all active staff members), you’ll need to adjust the questions_options tool. For questions where you’re updating question options, be sure to set the options to alphabetical under Layout.
-        ![](images/survey_setup_5.png)<br/>
+        ![](images/survey_setup_5.png)
 
 ---
 
-### Self & Others + Manager Assignments on the PM Management Document
+## Self & Others + Manager Survey Assignments
 
-#### Background
+### Background
 * School Leaders and DSOs need to update managers and S&O survey assignments each survey round
 * PM Management document lives [here](https://docs.google.com/spreadsheets/d/1d84x7HHOMgnQM78dYLY9vHqf-jLfYmpH8YGHEDezGNs/edit#gid=249348654)
 * Timing: Happens during a predefined window ahead of each survey round, 2-3 weeks before a survey round opens
 
-#### Steps to Update (Beginning Of Year)
+### Steps to Update (Beginning Of Year)
 
 * Go to the [PM Management Document](https://docs.google.com/spreadsheets/d/1d84x7HHOMgnQM78dYLY9vHqf-jLfYmpH8YGHEDezGNs/edit#gid=249348654). 
 * Update dates for this round.
@@ -44,7 +42,7 @@
 * In the S&O Assignments tab, unhide Column A, and run SQL query in gabby database.
 * Copy results table, and overwrite the first five columns in the S&O Assignments tab.
 * Remove any existing data in the S&O Assignments columns (Highlight all - Delete).
-        ![](images/survey_annual_2.png) <br/>      
+        ![](images/survey_annual_2.png)       
 
 * To create filter view for new schools:
     * Data > Filter Views > Create New Filter View
@@ -83,7 +81,7 @@
     * Copy the data and paste values back into the tab (so that the Index-match formula is overwritten).
     * Re-hide the ‘Engagement Survey Assignment’ tab
 
-#### Steps to Update (Middle Of Year & End of Year)
+### Steps to Update (Middle Of Year & End of Year)
 
 * Go to PM Management Document.
 * Update dates for this round.
@@ -104,7 +102,7 @@
 
 * Delete the ‘Copy of S&O Assignments’ tab
 
-#### Final Checks Before Sending to DSOs and School Leaders
+### Final Checks Before Sending to DSOs and School Leaders
 
 * Spot check some managers in column "ADP Manager + Whetstone Coach [Do Not Edit]” to ensure that the feed is correct
 * Check the ‘Survey Audits’ tab to make sure the columns are lining up and that the counts are working properly
@@ -119,26 +117,23 @@
 
 ---
 
-### Insight Survey Tracking
+## Insight Survey Tracking
 
 * Updating TNTP Completion Data
 
     <video src='images/updating_tntp.mp4' width=800/>
 ---
 
-### So, what’s actually happening on all of the tabs of the PM Management Document?
 
-* Content TBD
----
 
-### Survey Tracker
+## Survey Tracker
 
-#### Background
+### Background
 * Ops teams and leadership teams use the survey tracker to ensure all staff complete their surveys
 * The tracker updates 1x daily from SurveyGizmo/Alchemer
 * It is embedded in this [Zendesk article](https://www.google.com/url?q=https://teamschools.zendesk.com/hc/en-us/articles/360009435994&sa=D&source=editors&ust=1635433673892000&usg=AOvVaw2KaVrd-lhzS7MewmxRI1Oe) 
 
-#### Steps to Set up Prior to Survey Round
+### Steps to Set up Prior to Survey Round
 
 * Open Survey Tracker v2 in Tableau Desktop
 * Ensure that the correct assignment types are selected on the ‘Assignment Type’ filter (not the ‘Assignment Type (Filter)’)
@@ -149,14 +144,14 @@
 
 ---
 
-### Survey HQ
+## Survey HQ
 
-#### Background
+### Background
 * Survey HQ is where everyone goes to access surveys (except the TNTP Insight Survey)
 * The tracker updates 1x daily from SurveyGizmo/Alchemer
 * You can find it [here](https://www.google.com/url?q=https://tableau.kipp.org/t/KIPPNJ/views/PersonalizedSurveyLinks/SurveyHQ?:showAppBanner%3Dfalse%26:display_count%3Dn%26:showVizHome%3Dn%26:origin%3Dviz_share_link%26:embed%3Dy&sa=D&source=editors&ust=1635433673894000&usg=AOvVaw1f4r8b46CMtYxp6cAlX5Mn)
 
-#### Steps to Setup Prior to Survey Round
+### Steps to Setup Prior to Survey Round
 * Open ‘Personalized Survey Links’ in Tableau Desktop.
 * In Survey Links tab, ensure that the correct survey types are selected
 * Update the Academic Year filter
@@ -164,11 +159,11 @@
 * Double-check the dashboard is updating at 6am Eastern/3am Pacific
     ![](images/survey_hq_1.png)
 
-### Survey Campaigns
-#### Background
+## Survey Campaigns
+### Background
 * Surveys run on Alchemer (formerly SurveyGizmo). Below are steps to set up campaigns for each round of invitations, reminders, and completion trackers.
 
-#### Steps to Create the Campaign
+### Steps to Create the Campaign
 
 * Go to the Survey you want to create a campaign for, click share, and Create New Tracking Link
 * Create Campaign (DO NOT CLONE!) - Name it 'YEAR Survey Round' (YYYY SO#, YYYY MGR#, or YYYY R9#)
@@ -176,7 +171,7 @@
 * In advanced settings, set link Behavior to "Everyone gets the same link (can take survey as many times as they want)"
 * In advanced settings, set the Auto Open/Close Link dates & times to the survey window
 
-#### Steps to Extend a Campaign
+### Steps to Extend a Campaign
 * Go to the Survey you want to create a campaign for, click share, and Create New Tracking Link
 * Create the new survey Campaign and name it YEAR Survey Round-Extension' (YYYY SO#-Extension, YYYY MGR#-Extension, or YYYY R9#-Extension)
 * In advanced settings, set link Behavior to "Everyone gets the same link (can take survey as many times as they want)"
@@ -184,7 +179,7 @@
     * If you want to track surveys collected during the extension specifically, in advanced settings for the survey extension, set the Auto Open/Close Link dates & times to the survey extension window
     * If you want to track surveys collected during the extension as if they happened during the regular survey round, leave the dates in the extension campaign blank, but in advanced settings for the survey campaign, adjust the close date
 
-#### Steps to Load the Survey Roster
+### Steps to Load the Survey Roster
 * In Python Anywhere, run: 
     ```datarobot/surveygizmo/sg_question_options_update.py```
     * Sign into Python Anywhere (Kevin + Charlie have login access)
@@ -201,7 +196,7 @@
 * Upload CSV to Contacts in the campaign. Map column headers to fields.
         ![](images/survey_roster_3.png)
 
-#### Steps to Set Up Email Reminders
+### Steps to Set Up Email Reminders
 * Set up Survey reminder schedule (for all surveys it's Wednesday, Friday, Monday, Wednesday, Friday, Monday, Tuesday, Wednesday) - adjust links and custom fields in style and preview, check, "Disable all SurveyGizmo styling..." - you have to do this for every message
 
     ![](images/survey_emails_1.png)
@@ -219,7 +214,7 @@
 
     ![](images/survey_emails_3.png)
 
-#### Steps to Set Up Email Reminders
+### Steps to Set Up Email Reminders
 
 * Respond to Zendesk tickets daily, use the Tier 1 Survey Playbook to respond to the most common issues
 * As major issues come in, check with CAO, ED, school leader, and DSO
@@ -230,88 +225,15 @@
 
 ---
 
-#### Results Sharing & Close Out 
+### Results Sharing & Close Out 
 
-##### Data Analysis
+#### Data Analysis
 * Refresh OneLink, PM Survey Results, and other relevant dashboards
 * Confirm that the numbers don't look crazy (9-test)
 
-##### Communication
+#### Communication
 * Share out tentative results with core project owners
 * Share out results with School Leaders, DSOs, and TC
 * Change Survey Tracker refresh cycle to weekly
 * Record final survey numbers in the Survey Round-Up
 
-### Excellent Teaching Rubric
-
-#### Background: ETR, Performance Management Rounds
-Evaluation scores are recorded in Whetstone/SchoolMint Grow three times annually. 
-
-#### Lockbox
-
-After a round of performance management scores are finalized and normed, the data is put into a lockbox. Scores are made visible to teachers and no longer editable.
-
-* Confirm that schools have completed their ETR scores. In the event that some haven’t (see below), check with the school leaders and confirm whether an extension is needed.
-
-    ![](images/lockbox_1.png)
-
-* Open up the Teacher Goals Dashboard and navigate to the Lockbox_process tab (note: this tab is only accessible on Tableau Desktop)
-
-    ![](images/lockbox_2.png)
-    ![](images/lockbox_3.png)
-
-* Refresh all extracts and set the filters to the correct year and term
-
-    ![](images/lockbox_4.png)
-
-* Open the worksheet tab and activate the data by clicking anywhere on the sheet
-
-    ![](images/lockbox_5.png)
-
-* IF SOME SCHOOLS NEED AN EXTENSION (otherwise skip this step): Add Primary Site to rows
-
-    ![](images/lockbox_6.png)
-
-* Open the Worksheet Drop-down, go to Copy-> Data
-
-    ![](images/lockbox_7.png)
-
-* Open an Excel workbook and paste values into the Excel sheet
-
-* IF SOME SCHOOLS NEED AN EXTENSION (otherwise skip this step): Filter the schools that aren’t ready to upload or if you’re loading at the end of an extension filter the schools that have not been loaded yet. Filter and delete the rows completely.
-
-    ![](images/lockbox_8.png)
-    ![](images/lockbox_9.png)
-
-* Delete the Primary Site Column
-
-    ![](images/lockbox_10.png)
-
-* Confirm that the data looks right.
-
-    ![](images/lockbox_11.png)
-
-* Save the Excel table as a csv. The format should be "pm.teacher_goals_lockbox-yyyy q#". For an extension submission the format should be “pm.teacher_goals_lockbox-<schools>-yyyy q#”.
-
-    ![](images/lockbox_12.png)
-
-* Upload to the csv to [Google Cloud Storage](https://www.google.com/url?q=https://console.cloud.google.com/home/dashboard?project%3Dfivetran-167215%26pli%3D1&sa=D&source=editors&ust=1635860896326000&usg=AOvVaw2_54CQk74uZMV3nK-8hFpz) (Storage-> Browser-> Buckets-> data-robot-gcs-> pm-> teacher_goals_lockbox )
-
-    ![](images/lockbox_13.png)
-    ![](images/lockbox_14.png)
-
-* Save the csv on Google Drive. (Data Team -> Data Repository -> Teacher Goals Lockbox)
-
-    ![](images/lockbox_15.png)
-
-* When FiveTran refreshes (every ~15 minutes), the locked scores will show up in the dashboard. Check it by running ```SELECT * FROM pm.teacher_goals_lockbox``` in SQL.
-
-    ![](images/lockbox_16.png)
-
-* Confirm that stored values are displaying on tableau.pm_teacher_goals by running ```SELECT * FROM tableau.pm_teacher_goals```
-
-    ![](images/lockbox_17.png)
-
-* If all of the schools are done, you can turn the refresh for the Teacher Goals dashboard back on and Publish.
-
-    ![](images/lockbox_18.png)
