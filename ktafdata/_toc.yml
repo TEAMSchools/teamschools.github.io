@@ -6,11 +6,12 @@ root: intro
 format: jb-book
 parts:
 - chapters:
-  - file: content/team
+  - file: team
 - caption: Data Model
   chapters:
   - file: content/databases/data_model
   - file: content/databases/gabby
 - caption: Process Documentation
   chapters:
-  - file: content/processes/pm_surveys 
+  - file: content/processes/people/evals/pm_evals 
+  - file: content/processes/people/surveys/pm_surveys 
