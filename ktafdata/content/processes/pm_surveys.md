@@ -241,3 +241,15 @@
 * Share out results with School Leaders, DSOs, and TC
 * Change Survey Tracker refresh cycle to weekly
 * Record final survey numbers in the Survey Round-Up
+
+### Excellent Teaching Rubric
+
+#### Background: ETR, Performance Management Rounds
+Evaluation scores are recorded in Whetstone/SchoolMint Grow three times annually. 
+
+#### Lockbox
+
+After a round of performance management scores are finalized and normed, the data is put into a lockbox. Scores are made visible to teachers and no longer editable.
+
+* Confirm that schools have completed their ETR scores. In the event that some haven’t (see below), check with the school leaders and confirm whether an extension is needed.
+
