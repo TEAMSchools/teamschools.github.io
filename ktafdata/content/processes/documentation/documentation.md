@@ -16,7 +16,7 @@ Open a pull request when done adding content.
 
 ### Adding your content
 
-Site content files are stored in teamschools.github.io/ktafdata/content.
+Site content files are stored in ```teamschools.github.io/ktafdata/content```.
     
 ![](images/doc_1.png) 
 
@@ -28,7 +28,7 @@ Asterisks (*) add a bulleted (unordered) list
 
 Numbers add an ordered list, but won't automatically update like an outline.
 
-1. Numbered list example.
+1. Numbered list example
 
 ### Links
 
@@ -40,7 +40,7 @@ Numbers add an ordered list, but won't automatically update like an outline.
 
 ### Adding images
 
-Best practice is to make an 'images' subfolder and link to images/[name_of_file] with ![] before the path.
+Best practice is to make an 'images' subfolder and link to images/[name_of_file] with ![] before the path, so that you don't have to edit all the image links if your content folder moves elsewhere.
 
 ```![](link_to_image)``` inserts an image.
 

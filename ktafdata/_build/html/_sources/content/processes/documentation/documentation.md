@@ -6,7 +6,7 @@ This site is hosted on GitHub Pages and built by Jupyter-Book. You can create ne
 
 ### GitHub Repository
 
-Clone the teamschools.github.io repository to your local machine.
+Clone the [teamschools.github.io](https://github.com/TEAMSchools/teamschools.github.io) repository to your local machine.
 
 Create a new branch for your changes.
 
@@ -14,9 +14,9 @@ Open the repository in VS Code or another text editor.
 
 Open a pull request when done adding content.
 
-#### Adding your content
+### Adding your content
 
-Site content files are stored in teamschools.github.io/ktafdata/content.
+Site content files are stored in ```teamschools.github.io/ktafdata/content```.
     
 ![](images/doc_1.png) 
 
@@ -28,9 +28,9 @@ Asterisks (*) add a bulleted (unordered) list
 
 Numbers add an ordered list, but won't automatically update like an outline.
 
-1. Numbered list example.
+1. Numbered list example
 
-#### Links
+### Links
 
 ```[Brackets](link_or_path)``` makes a hyperlink in Markdown.
 
@@ -38,15 +38,15 @@ Numbers add an ordered list, but won't automatically update like an outline.
 
 ![](images/doc_4.png) 
 
-#### Adding images
+### Adding images
 
-Best practice is to make an 'images' subfolder and link to images/[name_of_file] with ![] before the path.
+Best practice is to make an 'images' subfolder and link to images/[name_of_file] with ![] before the path, so that you don't have to edit all the image links if your content folder moves elsewhere.
 
 ```![](link_to_image)``` inserts an image.
 
 ![](images/doc_3.png) 
 
-#### Formatting
+### Formatting
 
 Number of hash marks placed before text determine heading level (1 - 6), and puts headings in the sidebar navigation.
 
