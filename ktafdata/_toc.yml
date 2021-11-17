@@ -16,3 +16,6 @@ parts:
   - file: content/processes/documentation/documentation
   - file: content/processes/people/evals/pm_evals 
   - file: content/processes/people/surveys/pm_surveys 
+- caption: Style Guides
+  chapters:
+  - file: content/style_guides/tableau.md

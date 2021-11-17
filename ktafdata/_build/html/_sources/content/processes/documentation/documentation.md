@@ -12,7 +12,7 @@ Create a new branch for your changes.
 
 Open the repository in VS Code or another text editor.
 
-Open a pull request when done adding content.
+Open a pull request.
 
 ### Adding your content
 
@@ -54,11 +54,5 @@ Number of hash marks placed before text determine heading level (1 - 6), and put
 
 ![](images/doc_2.png) 
 
-# Header 1
-## Header 2
-### Header 3
-#### Header 4
-##### Header 5
-###### Header 6
 
 
